@@ -1,0 +1,227 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "format:CA.{#####}",
+	"creation": "2026-01-21 06:30:00.000000",
+	"default_sort_field": "modified",
+	"default_sort_order": "DESC",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"company",
+		"branch",
+		"department",
+		"column_break_5",
+		"get_from",
+		"payee",
+		"payee_name",
+		"date",
+		"releasing_and_liquidation",
+		"released_to",
+		"release_date",
+		"column_break_22",
+		"liquidation_due_date",
+		"liquidation_date",
+		"section_break_25",
+		"liquidation",
+		"calculate",
+		"total_requested",
+		"total_liquidated",
+		"unliquidated",
+		"status_reason",
+		"refund_return",
+		"refunded",
+		"returned",
+		"refund_return_date",
+		"reference",
+		"from_to"
+	],
+	"fields": [
+		{
+			"default": "All Transport Network Inc",
+			"fieldname": "company",
+			"fieldtype": "Select",
+			"label": "Company",
+			"options": "All Transport Network Inc\nAll Systems Logistics Inc"
+		},
+		{
+			"fieldname": "branch",
+			"fieldtype": "Link",
+			"label": "Branch",
+			"options": "Branch"
+		},
+		{
+			"fieldname": "department",
+			"fieldtype": "Link",
+			"label": "Department",
+			"options": "CA Department"
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "get_from",
+			"fieldtype": "Select",
+			"label": "Fund Source",
+			"options": "Bank\nRevolving Fund\nPetty Cash Fund\nFacilitation"
+		},
+		{
+			"fieldname": "payee",
+			"fieldtype": "Link",
+			"label": "Payee",
+			"options": "Supplier"
+		},
+		{
+			"fieldname": "payee_name",
+			"fieldtype": "Data",
+			"fetch_from": "payee.supplier_name",
+			"label": "Payee Name",
+			"read_only": 1
+		},
+		{
+			"default": "Today",
+			"fieldname": "date",
+			"fieldtype": "Date",
+			"label": "Request Date"
+		},
+		{
+			"fieldname": "releasing_and_liquidation",
+			"fieldtype": "Section Break",
+			"label": "Releasing and Liquidation"
+		},
+		{
+			"fieldname": "released_to",
+			"fieldtype": "Link",
+			"label": "Release To",
+			"options": "Supplier"
+		},
+		{
+			"fieldname": "release_date",
+			"fieldtype": "Date",
+			"label": "Release Date"
+		},
+		{
+			"fieldname": "column_break_22",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "liquidation_due_date",
+			"fieldtype": "Date",
+			"label": "Liquidation Due Date"
+		},
+		{
+			"fieldname": "liquidation_date",
+			"fieldtype": "Date",
+			"label": "Liquidation Date"
+		},
+		{
+			"fieldname": "section_break_25",
+			"fieldtype": "Section Break"
+		},
+		{
+			"fieldname": "liquidation",
+			"fieldtype": "Table",
+			"label": "Liquidation",
+			"options": "Cash Advance Liquidation"
+		},
+		{
+			"fieldname": "calculate",
+			"fieldtype": "Button",
+			"label": "Calculate"
+		},
+		{
+			"fieldname": "total_requested",
+			"fieldtype": "Currency",
+			"label": "Total Requested"
+		},
+		{
+			"fieldname": "total_liquidated",
+			"fieldtype": "Currency",
+			"label": "Total Liquidated",
+			"read_only": 1
+		},
+		{
+			"fieldname": "unliquidated",
+			"fieldtype": "Currency",
+			"label": "Unliquidated",
+			"read_only": 1
+		},
+		{
+			"fieldname": "status_reason",
+			"fieldtype": "Small Text",
+			"label": "Status Reason"
+		},
+		{
+			"fieldname": "refund_return",
+			"fieldtype": "Section Break",
+			"label": "Refund /Return"
+		},
+		{
+			"fieldname": "refunded",
+			"fieldtype": "Currency",
+			"label": "Refunded"
+		},
+		{
+			"fieldname": "returned",
+			"fieldtype": "Currency",
+			"label": "Returned"
+		},
+		{
+			"fieldname": "refund_return_date",
+			"fieldtype": "Date",
+			"label": "Refund/Return Date"
+		},
+		{
+			"fieldname": "reference",
+			"fieldtype": "Data",
+			"label": "Reference"
+		},
+		{
+			"fieldname": "from_to",
+			"fieldtype": "Link",
+			"label": "From/To",
+			"options": "Supplier"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"max_attachments": 0,
+	"modified": "2026-01-21 06:30:00.000000",
+	"modified_by": "Administrator",
+	"module": "Cash Advance",
+	"name": "Cash Advance Request",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Accounts User",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}
