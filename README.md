@@ -81,11 +81,15 @@ cash_advance/
 │   │   └── config/
 │   │       └── desktop.py     # Desktop icon configuration
 │   └── doctype/
-│       └── cash_advance_request/
+│       ├── cash_advance_request/      # Main DocType
+│       │   ├── __init__.py
+│       │   ├── cash_advance_request.json
+│       │   ├── cash_advance_request.py
+│       │   └── cash_advance_request.js
+│       └── cash_advance_liquidation/  # Child Table DocType
 │           ├── __init__.py
-│           ├── cash_advance_request.json
-│           ├── cash_advance_request.py
-│           └── cash_advance_request.js
+│           ├── cash_advance_liquidation.json
+│           └── cash_advance_liquidation.py
 ```
 
 ## DocType Details
@@ -97,6 +101,15 @@ cash_advance/
 - **App:** cash_advance
 - **Autoname Format:** CA.{#####}
 - **Engine:** InnoDB
+
+### Cash Advance Liquidation
+
+- **Name:** Cash Advance Liquidation
+- **Type:** Child Table
+- **Parent:** Cash Advance Request
+- **Module:** Cash Advance
+- **App:** cash_advance
+- **Autoname Format:** {job_no}-{charge_code}
 
 ## Usage
 
