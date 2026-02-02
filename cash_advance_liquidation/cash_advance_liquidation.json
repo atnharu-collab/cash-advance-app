@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{job_no}-{charge_code}",
+ "creation": "2026-01-21 06:30:00.000000",
+ "default_sort_field": "modified",
+ "default_sort_order": "DESC",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "request_section",
+  "charge_code",
+  "description",
+  "column_break_4",
+  "job_no",
+  "amount_requested",
+  "liquidation_section",
+  "liquidation",
+  "reference_no",
+  "date",
+  "amount_liquidated",
+  "attachment",
+  "column_break_12",
+  "particulars"
+ ],
+ "fields": [
+  {
+   "fieldname": "request_section",
+   "fieldtype": "Section Break",
+   "label": "Request"
+  },
+  {
+   "fieldname": "charge_code",
+   "fieldtype": "Link",
+   "label": "Charge Code",
+   "options": "Charge Code"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_no",
+   "fieldtype": "Link",
+   "label": "Job No",
+   "options": "Job Costing Number"
+  },
+  {
+   "fieldname": "amount_requested",
+   "fieldtype": "Currency",
+   "label": "Amount Requested"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "liquidation_section",
+   "fieldtype": "Section Break",
+   "label": "Liquidation"
+  },
+  {
+   "fieldname": "liquidation",
+   "fieldtype": "Section Break",
+   "label": "Liquidation"
+  },
+  {
+   "fieldname": "reference_no",
+   "fieldtype": "Data",
+   "label": "Reference No"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "amount_liquidated",
+   "fieldtype": "Currency",
+   "label": "Amount Liquidated"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "particulars",
+   "fieldtype": "Long Text",
+   "label": "Particulars"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "max_attachments": 0,
+ "modified": "2026-01-21 06:35:00.000000",
+ "modified_by": "Administrator",
+ "module": "Cash Advance",
+ "name": "Cash Advance Liquidation",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
